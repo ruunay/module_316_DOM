@@ -18,6 +18,7 @@ document.querySelectorAll('form').forEach(form => {
 // - #email1
 
 
+
 // ===== Exercise 2: Input Types =====
 // TODO: In index.html, change the type attribute for:
 // - #email2 → type="email"

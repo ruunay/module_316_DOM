@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBA 316: Vinyl Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <link href= "https://fonts.googleapis.com/css?family=Audiowide" > 
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="guitar.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="container">
+        <header id="page-header">
+            <h1>Vinyl Vault</h1>
+        <p id="status-text">Feed the frequency <span id="window-width"></span></p>
+        </header>
+
+        <main>
+            <section id="form-container">
+                <form id="album-form" novalidate>
+                    <div class="form-group">
+                        <label style="display:none;" for="album-input">Album Title</label>
+                        <input type="text" id="album-input" placeholder="ALBUM TITLE" required minlength="2">
+                        
+                        <label style="display:none;" for="artist-input">Artist Name</label>
+                        <input type="text" id="artist-input" placeholder="ARTIST NAME" required>
+                        
+                        <button type="submit" id="submit-btn">Add to Vault</button>
+                    </div>
+                    <p id="error-message" style="color: #ff3131; display: none; font-weight: bold; margin-top: 15px; text-transform: uppercase; font-size: 0.8rem;"></p>
+                </form>
+            </section>
+
+            <ul id="album-list">
+                </ul>
+
+            <template id="album-template">
+                <li class="album-card">
+                    <span class="info"></span>
+                    <button class="delete-btn">Burn</button>
+                </li>
+            </template>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
